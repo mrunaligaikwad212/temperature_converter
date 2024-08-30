@@ -3,252 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="navs.css">
-    <link rel="stylesheet" href="starbucks.js">
-
-    <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!--font-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;900&display=swap" rel="stylesheet">
-
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    
-    
-    <div class="circle">
-
-    </div>
-    
-        <nav class="navigation">
-            <ul>
-                <li>
-                    <img class="imgs" src="star-logo.png">
-
-                    <a href="#">Home</a>
-                    
-                    <a href="order.html">Order</a>
-                    
-                    <a href="about.html">About</a>
-                    <button class="but">
-                        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
-                        <a href="#"><p id="pa">Looking for something specific?</p></a>
-
-                    </button>
-                    <div class="user">
-                        <i class="fa-solid fa-user"></i>
-                    </div>
-                    
-                    
-                </li>
-            </ul>
-            
-            
-        </nav>
-
-        <div class="line">-</div>
-
-        <div class="content">
-            <p id="reward">Rewards are pouring Keep visiting. </p>
-            <button  id="b" href="#">know More</button>
-            
-
+    <section class="calculator">
+        <form>
+            <input type="text" class="screen" readonly>
+        </form>
+        <div class="button">
+            <button type="button" class="btn btn-yellow" data-num="*">*</button>
+            <button type="button" class="btn btn-yellow" data-num="/">/</button>
+            <button type="button" class="btn btn-yellow" data-num="-">-</button>
+            <button type="button" class="btn btn-yellow" data-num="+">+</button>
+            <button type="button" class="btn btn-grey" data-num="9">9</button>
+            <button type="button" class="btn btn-grey" data-num="8">8</button>
+            <button type="button" class="btn btn-grey" data-num="7">7</button>
+            <button type="button" class="btn btn-grey" data-num="6">6</button>
+            <button type="button" class="btn btn-grey" data-num="5">5</button>
+            <button type="button" class="btn btn-grey" data-num="4">4</button>
+            <button type="button" class="btn btn-grey" data-num="3">3</button>
+            <button type="button" class="btn btn-grey" data-num="2">2</button>
+            <button type="button" class="btn btn-grey" data-num="1">1</button>
+            <button type="button" class="btn btn-grey" data-num="0">0</button>
+            <button type="button" class="btn btn-grey" data-num=".">.</button>
+            <button type="button" class="btn btn-equal">=</button>
+            <button type="button" class="btn btn-clear">C</button>
         </div>
-
-        <div class="textBox">
-            <h2>It's not just Coffee<br> It's<span> Starbucks</span></h2>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                     Eum autem, placeat provident<br> quam repudiandae quas enim! Vel quaerat ad asperiores accusantium provident odit,<br> 
-                    numquam molestiae eius ipsa eaque recusandae voluptatum.</p>
-            <div class="imgBox">
-                <img src="starimg1.png" class="starbucks">
-                
-
-            </div>
-                    
-
-        </div>
-        <div>
-            <ul class="imgBox2">
-                <li><img src="starimg2.png" onclick="imgSlider('starimg2.png');circleColor('#d752b1')"></li>
-                <li><img src="starimg3.png" onclick="imgSlider('starimg3.png');circleColor('#eb7495')"></li>
-                <li><img src="starimg1.png" onclick="imgSlider('starimg1.png');circleColor('#017143')"></li>
-    
-            </ul>
-    
-
-        </div>
-        <div class="middle">
-            <h1>HandCrafted Curations</h1>
-            <div class="box">
-                <div class="box1">
-                    <img class="allimages" src="Bestseller.png">
-                    <p>Bestseller</p>
-                    
-                </div>
-
-                <div class="box2">
-                    <img class="allimages"src="Food.png">
-                    <p>Food</p>
-                </div>
-
-                <div class="box3">
-                    <img class="allimages" src="Drinks.png">
-                    <p>Drinks</p>
-                </div>
-
-                <div class="box4">
-                    <img class="allimages" src="Merchandise.png">
-                    <p>Merchandise</p>
-                </div>
-
-                <div >
-                    <img class="allimages" src="CoffeeAtHome.png">
-                    <p>Coffee At Home</p>
-                </div>
-                
-                <div>
-                    <img class="allimages" src="ReadyToEat.png">
-                    <p>Ready To Eat</p>
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="oder-content">
-            <h2 id="para2">What would you like to order?</h2>
-            <p id="para3">Everyone's favorite Starbucks put togetheer in a specially curated collection.</p>
-
-            <div class="order-box">
-                <div class="order-box1">
-                    <img class="ord-img1" src="Bestseller.png">
-                    <h1>Java Chip Frappuccino</h1>
-                    <p>We blend mocha sauce and<br>
-                    Frappuccino chips</p>
-                    <p>$20.50</p>
-                    <button>Add Item</button>
-                </div>
-
-                
-
-
-                <div class="order-box2">
-                    <img class="ord-img2" src="star-oder.jpg">
-                    <h1>Frappuccino</h1>
-                    <p>We blend mocha sauce and<br>
-                    Frappuccino chips</p>
-                    <p>$20.50</p>
-                    <button>Add Item</button>
-                    
-
-                </div>
-                
-
-                <div class="order-box3">
-                    <img class="ord-img3" src="star-order2.jpg">
-                    <h1> Chip Frappuccino</h1>
-                    <p>We blend mocha sauce and<br>
-                    Frappuccino chips</p>
-                    <p>$20.50</p>
-                    <button>Add Item</button>
-                </div>
-               
-
-                <div class="order-box4">
-                    <img class="ord-img4" src="star-order3.jpg">
-                    <h1>Java Chip Frappuccino</h1>
-                    <p>We blend mocha sauce and<br>
-                    Frappuccino chips</p>
-                    <p>$20.50</p>
-                    <button>Add Item</button>
-                </div>
-                
-
-                <div class="order-box5">
-                    <img class="ord-img3" src="star-oder.jpg">
-                    <h1>Java Chip Frappuccino</h1>
-                    <p>We blend mocha sauce and<br>
-                    Frappuccino chips</p>
-                    <p>$20.50</p>
-                    <button>Add Item</button>
-                </div>
-                
-
-                
-
-            </div>
-        </div>
-
-
-        <img class="logos" src="star-logo.png">
-        <div class="about-text">
-            
-            <div class="about-us1">
-                <h2>About Us</h2>
-                <p>Our Heritage</p>
-                <p>Coffeehouse</p>
-                <p>Our Company</p>
-
-            </div>
-
-            <div class="about-us2">
-                <h2>Responsibility</h2>
-                <p>Community</p>
-                <p>Ethical Sourcing</p>
-                <p>Environmental Stewardship</p>
-                <p>Diversity</p>
-            </div>
-            <div class="about-us3">
-                <h2>Quick Links</h2>
-                <p>Privacy Policy</p>
-                <p>Starbucks Rewards Day Offer</p>
-                <p>Delivery</p>
-            </div>
-
-            <div class="about-us4">
-                <h2>SOCIAL MEDIA</h2>
-                <a href="www.instagram.com"><i class="fa-brands fa-instagram"></i></a>
-                <a href="www.facebook.com"><i class="fa-brands fa-facebook"></i></a>
-                <a href="www.twitter.com"><i class="fa-brands fa-twitter"></i></a>
-
-            </div>
-
-        </div>
-        <hr>
-
-        
-        <div class="footer">
-            <p>Terms of Use</p>
-            <p>Contact Us</p>
-        </div>
-        
-
-    
-
-        <script type="text/JavaScript">
-            function imgSlider(anything)
-            {
-                document.querySelector('.starbucks').src = anything;
-            }
-            function circleColor(color)
-            {
-                
-                    const circle = document.querySelector('.circle');
-                    circle.style.background = color;
-                
-            }
-
-
-        </script>
-    
-    
-        
-        
-        
+    </section>
+    <script src="app.js"></script>
 </body>
 </html>
-
