@@ -1,49 +1,30 @@
-let celsiusInput = document.querySelector('#celsius > input')
-let fahrenheitInput = document.querySelector('#fahrenheit > input')
-let kelvinInput = document.querySelector('#kelvin > input')
+(function() {
+    let screen = document.querySelector('.screen');
+    let buttons = document.querySelectorAll('.btn');
+    let clear = document.querySelector('.btn-clear');
+    let equal = document.querySelector('.btn-equal');
 
-let btn = document.querySelector('.button button')
-
-
-function roundNumber(number){
-    return Math.round(number*100)/100
-}
-
-
-/* Celcius to Fahrenheit and Kelvin */
-celsiusInput.addEventListener('input', function(){
-    let cTemp = parseFloat(celsiusInput.value)
-    let fTemp = (cTemp*(9/5)) + 32
-    let kTemp = cTemp + 273.15
-
-    fahrenheitInput.value = roundNumber(fTemp)
-    kelvinInput.value = roundNumber(kTemp)
-})
-
-
-/* Fahrenheit to Celcius and Kelvin */
-fahrenheitInput.addEventListener('input', function(){
-    let fTemp = parseFloat(fahrenheitInput.value)
-    let cTemp = (fTemp - 32) * (5/9)
-    let kTemp = (fTemp -32) * (5/9) + 273.15
-
-    celsiusInput.value = roundNumber(cTemp)
-    kelvinInput.value = roundNumber(kTemp)
-})
-
-/* Kelvin to Celcius and Fahrenheit */
-kelvinInput.addEventListener('input', function(){
-    let kTemp = parseFloat(kelvinInput.value)
-    let cTemp = kTemp - 273.15
-    let fTemp = (kTemp - 273.15) * (9/5) + 32
-
-    celsiusInput.value = roundNumber(cTemp)
-    fahrenheitInput.value = roundNumber(fTemp)
-})
-
-
-btn.addEventListener('click', ()=>{
-    celsiusInput.value = ""
-    fahrenheitInput.value = ""
-    kelvinInput.value = ""
-})
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            let value = e.target.dataset.num;
+            if (value !== undefined) {
+                screen.value += value;
+            }
+        });
+    });
+    equal.addEventListener('click', function(e) {
+        if (screen.value === '') {
+            screen.value = "Please enter";
+        } else {
+            try {
+                let answer = eval(screen.value);
+                screen.value = answer;
+            } catch (error) {
+                screen.value = "Error";
+            }
+        }
+    });
+    clear.addEventListener('click', function(e) {
+        screen.value = "";
+    });
+})()
